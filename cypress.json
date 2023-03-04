@@ -3,13 +3,5 @@
     "chromeWebSecurity":false,
     "pageLoadTimeout":300000,
     "watchForFileChanges": false,
-    "testFiles": "**/*.js",
-    "reporter":"mochawesome",
-    "reporterOptions": {
-        "charts":true,
-        "overwrite":false,
-        "html":false,
-        "json":true,
-        "reportDir":"cypress/reports" 
-    }
+    "testFiles": "**/*.js"
 }
