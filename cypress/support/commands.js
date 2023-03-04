@@ -29,3 +29,4 @@ Cypress.Commands.add('login', (username, password) => {
     cy.get('#password').type(password)
     cy.get('.MuiButton-root').click()
 })
+import 'cypress-file-upload'; 
