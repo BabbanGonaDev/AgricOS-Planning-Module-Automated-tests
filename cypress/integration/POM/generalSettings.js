@@ -94,4 +94,16 @@ export class generalSettings {
       ":nth-child(9) > .react-date-picker__wrapper > .react-date-picker__inputGroup > .react-date-picker__inputGroup__year"
     ).type("2023", { force: true });
   }
+  genSetPage(){
+    cy.contains("General Settings").click({ force: true });
+    this.selectCountry()
+    cy.get("#companyLanguage").click({ force: true });
+    cy.get('[data-value="FRENCH"]').click()
+    this.selectTimezone()
+    this.selectCurrency();
+    this.selectCrop()
+    this.selectSeason()
+    cy.get('.css-oev5bd > .MuiButton-root') //click the save button on general settings page
+    
+  }
 }

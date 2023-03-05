@@ -1,12 +1,9 @@
-describe('Member Settings Menu', () => {
-    
-    beforeEach(()=>{
-        cy.visit('/')
-        cy.login('Excel01', 1234)
+export class memSettings{
+    visitMemSettings(){
         cy.contains('Member Settings').click({force:true})
-    })
+    }
 
-    it('Select Rice and Seed type',()=>{
+    selectRice(){
         cy.get('div.dropdown-heading-value').click()
         cy.contains('Rice').click() // select rice
 
@@ -14,10 +11,11 @@ describe('Member Settings Menu', () => {
         cy.contains('Maize').click() // unselect Maize
         
         cy.get(':nth-child(2) > .rmsc > .dropdown-container') .click() //selecting seed type for rice
-    }) 
 
-    it.only('Select Maize and Seed type',()=>{
-       //Maize is selected by default.
+    }
+
+    selectMaize(){
+        //Maize is selected by default.
 
        //SM15-F seed type is selected by default, lets select PVA13B and unselect SM15-F
         
@@ -35,11 +33,10 @@ describe('Member Settings Menu', () => {
 
         //clicking the update button
         cy.get('.css-oev5bd > .MuiButton-root').click()
-    }) 
-
-    it.skip('Download and Upload Templates',()=>{
-        
-        //Downloading TG and TGE templates
+   
+    }
+    upDownload(){
+         //Downloading TG and TGE templates
         
         // cy.get('[href="http://planning.agric-os.com/tg-template"]').click({force:true})
         // cy.get('[href="http://planning.agric-os.com/tge-template"]').click({force:true})
@@ -51,5 +48,5 @@ describe('Member Settings Menu', () => {
         cy.get(':nth-child(3) > div > .MuiButton-root').click()
         // Adding assertion
         cy.get('h3').should('have.text','File Upload successful')
-    })
-})
+    }
+} 
