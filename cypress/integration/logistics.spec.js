@@ -2,7 +2,7 @@
 import { loginPage } from "./POM/loginPage";
 import { logis } from "./POM/logistics";
 
-describe("Farm Input", () => {
+describe("Logistics", () => {
   let credentials;
   const my_login_page = new loginPage();
   const logistic = new logis();
