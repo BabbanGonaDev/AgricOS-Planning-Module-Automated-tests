@@ -22,7 +22,11 @@ describe("Assets", () => {
   
     
   it('Fill Assets details',()=>{
-
+    asset.personnelTools(2000)
+    asset.consummables(3,30000)
+    asset.inputStorage(90,100000,12000)
+    asset.outputStorage(2000,35000,6000)
+    asset.save()
 })
 
 })
