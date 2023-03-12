@@ -1,10 +1,9 @@
-describe('Management Menu', () => {
-    
-    beforeEach(()=>{
-        cy.visit('/')
-        cy.login('Excel01', 1234)
-        cy.contains('Management').click({force:true})
-    })
+export class management{
+    visitManagement(){
+        cy.contains('Management').click({force:true});
+    }
+}
+
     
     it('Hub management', () => {
         cy.get('.bg-green').should('be.visible').and('have.text','Hubs')
@@ -61,4 +60,3 @@ describe('Management Menu', () => {
         
        
     })
-})
