@@ -6,7 +6,7 @@ describe("Management Menu", () => {
   let credentials;
   const my_login_page = new loginPage();
   const manage = new management();
-  
+
   // importing the stored username and password
   before(() => {
     cy.fixture("Login_credentials").then((data) => {
@@ -19,10 +19,19 @@ describe("Management Menu", () => {
     my_login_page.validLogin(credentials.username, credentials.password);
     manage.visitManagement();
   });
-  
-    
-  it('Fill Management',()=>{
 
-})
+  it("Hub Management", () => {
+    manage.hubMagement()
+  });
+  it("Create new hub", () => {}); // functionality not yet implemented
 
-})
+  it.only("Edit a hub", () => {
+    manage.editHub()
+  });
+  it("User management", () => {
+    manage.userManagement()
+  });
+  it("Create new user", () => {
+    manage.createHub()
+  });
+});
