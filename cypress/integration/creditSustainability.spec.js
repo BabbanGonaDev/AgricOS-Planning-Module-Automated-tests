@@ -2,7 +2,7 @@
 import { loginPage } from "./POM/loginPage";
 import { creditSus } from "./POM/creditSustainability";
 
-describe("Farm Input", () => {
+describe("Credit Sustainability", () => {
   let credentials;
   const my_login_page = new loginPage();
   const cred = new creditSus();

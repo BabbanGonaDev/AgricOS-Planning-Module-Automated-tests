@@ -2,7 +2,7 @@
 import { loginPage } from "./POM/loginPage";
 import { assets } from "./POM/assets";
 
-describe("Location Planning", () => {
+describe("Assets", () => {
   let credentials;
   const my_login_page = new loginPage();
   const asset = new assets();

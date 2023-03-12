@@ -2,7 +2,7 @@
 import { loginPage } from "./POM/loginPage";
 import { memSettings } from "./POM/memberSetting";
 
-describe("General Settings", () => {
+describe("Member Settings", () => {
   let credentials;
   const my_login_page = new loginPage();
   const memSet = new memSettings();

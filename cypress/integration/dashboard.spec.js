@@ -3,7 +3,7 @@ import { loginPage } from "./POM/loginPage";
 import { dashboard } from "./POM/dashboard";
 
 
-describe("Planning Login Screen", () => {
+describe("Dashboard", () => {
 
 
     let credentials;
